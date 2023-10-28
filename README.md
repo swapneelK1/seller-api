@@ -1,6 +1,7 @@
 The task is to design a graphql api for an application which shows aggregated seller information for different companies. 
 
 Query: 
+``` bash
 query {
   sellers(filter: {searchByName:"amazon1", producerIds:[], marketplaceIds:[]}, page: {page: 0, size:10}, sortBy: SELLER_INFO_EXTERNAL_ID_ASC) {
     meta {
@@ -21,8 +22,10 @@ query {
     }
   }
 }
+```
 
 Sample Response:
+``` bash
 {
   "data": {
     "sellers": {
@@ -55,3 +58,4 @@ Sample Response:
     }
   }
 }
+```
